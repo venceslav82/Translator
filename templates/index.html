@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преводач на файлове</title>
+    <link rel="icon" href="/static/logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo.png" class="logo" alt="Лого">
+    <h1>Превод на файлове</h1>
+    <p>Изберете файл за превод на български език (pdf, docx, xlsx, xls):</p>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".docx,.xlsx,.xls,.pdf" required>
+        <br><br>
+        <button type="submit">Качи и Преведи</button>
+    </form>
+</body>
+</html>
